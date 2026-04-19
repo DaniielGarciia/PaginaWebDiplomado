@@ -1,0 +1,350 @@
+.hidden {
+    display: none;
+}
+
+/* Efecto de caja sobre el Login*/
+#login-section .card {
+    background: #fefdfd;
+    border: 0.5px solid #000000;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 380px;
+    margin: 24px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*estilo para el texto del login h2*/
+#login-section h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+/* Estilo de la caja de ingreso de informacion de login*/
+#login-section input {
+    padding: 9px 12px;
+    border: 0.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+/* Efecto de la caja input al estar sobre el */
+#login-section input:focus {
+    border-color: #888;
+}
+
+/* Funciones y diseño del boton login*/
+#btn-login {
+    padding: 9px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+/* Efecto sobre el boton login*/
+#btn-login:hover {
+    background: #333;
+}
+/* Color del mensaje al ingresar mal el usuario */
+.error {
+    color: #be123c;
+    font-size: 12px;
+}
+
+/* Contenedor de tarjetas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px 0;
+}
+
+/* Vista del producto */
+.product-card {
+    background: #ffffff;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+/* Efecto de sombra al pasar el mouse*/
+.product-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* edicion de la vista en la imagen de la tarjeta */
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Diseño del texto del producto */
+
+.product-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+/* Diseño de la descripcion del producto */
+.product-card p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* ── Cuerpo interno de la card ── */
+.card-body {
+    padding: 12px 14px;
+}
+
+/* Forma para mostrar el antiguo precio al tener descuento */
+.price-old {
+    font-size: 15px;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-right: 6px;
+}
+
+/* Forma con color para dar el nuevo precio con el descuento*/
+.price-new {
+    font-size: 15px;
+    font-weight: 700;
+    color: #3c8055;
+}
+
+/* Forma de marcar el descuento que tubo */
+.badge-off {
+    display: inline-block;
+    background: #dcfce7;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 99px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+/* Boton admin dentro de la tarjeta ── */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/* Boton editar dentro del admin*/ 
+.btn-edit {
+
+    flex: 1;
+    padding: 7px;
+    background: #f0f9ff;
+    color: #348ebe;
+    border: 0.5px solid #b1d1e3;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+/* Efecto o sombra sobre el boton editar*/
+.btn-edit:hover {
+    background: #e0f2fe;
+}
+
+/* Boton Eliminar dentro del admin*/
+.btn-delete {
+    flex: 1;
+    padding: 7px;
+    background: #fff1f2;
+    color: #be123c;
+    border: 0.5px solid #fecdd3;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+/* Efecto del mouse sobre el boton eliminar */
+.btn-delete:hover {
+    background: #ffe4e6;
+}
+/* forma y color del boton guardar*/
+#btn-save-product {
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+/* Efecto sobre el boton guardar productos */
+#btn-save-product:hover {
+    background: #333;
+}
+
+/* Formulario de los productos*/
+#admin-section .card {
+    background: #ffffff;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+#admin-section h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+#admin-section h4 {
+    font-size: 13px;
+    color: #888;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+#product-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#product-form input {
+    padding: 9px 12px;
+    border: 0.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#product-form input:focus {
+    border-color: #888;
+}
+/* Reutilizacion de acciones para la misma aplicacion*/
+#prod-img,
+#prod-description,
+#btn-save-product {
+    grid-column: 1 / -1;
+}
+
+/* acciones de iniciar y cerrar seccion */
+#nav-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 8px 24px;
+    background: #fff;
+    border-bottom: 0.5px solid #e5e5e5;
+}
+
+/* Tamaño y diseño para el boton login */
+#btn-show-login {
+    padding: 7px 14px;
+    background: transparent;
+    border: 0.5px solid #bbb;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Efecto del boton login*/
+#btn-show-login:hover {
+    background: #f0f0f0;
+}
+
+/* Tamaño y diseño para el boton cerrar sesion*/
+#btn-logout {
+    padding: 7px 14px;
+    background: #560b0b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Efecto del boton cerrar seccion */
+#btn-logout:hover {
+    background: #8a1818;
+}
+
+/* Diseño para el stock en este caso la separación */
+#store-section {
+    padding: 24px;
+}
+
+/* Diseño al texto del stock */
+#store-section h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #111;
+}
+
+/* Footer o pie de pagina── */
+.footer {
+    background-color: #1f2937;
+    color: #f8fafc;
+}
+
+.footer a:hover {
+    color: #93c5fd;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list a {
+    font-size: 0.95rem;
+}
+
+.footer-list li {
+    margin-bottom: 6px;
+}
+
+.footer-icon-img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

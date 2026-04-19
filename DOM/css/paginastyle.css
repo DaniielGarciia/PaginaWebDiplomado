@@ -1,0 +1,238 @@
+.body{
+    padding: 80%;
+}
+
+.imagenColumna{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ── Responsive para (pantallas pequeñas) ─── */
+@media (max-width: 768px) {
+  .seccion-texto-imagen,
+  .seccion-video {
+    grid-template-columns: 1fr;
+  }
+
+  .celda img {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+.tituloUsado{
+
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.textoParrafo{
+    
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.botonLink{
+    
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}   
+
+.lista  {
+    
+    margin: 20px 10px;
+    text-align: left;
+    list-style-type: disc;
+    padding: 0;
+}
+
+.lista a{
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lista a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.servicio-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    max-width: 420px;
+    width: 100%;
+}
+
+.video-card {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.video-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+@media (max-width: 768px) {
+    .servicio-card, .video-card {
+      max-width: 100%;
+      margin: 8px auto;
+    }
+}
+.servicio-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.video-card {
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.video-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+
+
+.textolista{
+    margin: 0 0 0 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #1f2937;
+    color: #f8fafc;
+}
+
+.footer a:hover {
+    color: #93c5fd;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-icon {
+    margin-right: 6px;
+    font-size: 0.95rem;
+    color: #f8fafc;
+}
+
+.footer-list a {
+    font-size: 0.95rem;
+}
+
+.footer-list li {
+    margin-bottom: 6px;
+}
+
+.footer-icon-img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+}
+
+/* ── Reset básico ─────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* ── seccion inicial de texto e imagen ────────── */
+.seccionTextoConImagen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 40px 32px;
+  border-bottom: 1px solid #eee;
+}
+
+.celda {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.celda p {
+  flex: 1;
+}
+
+/* estilo para las imagenes dentro de la celda */
+
+.celda img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ── Sección 2: Título + Video + Texto ── */
+.seccion-video {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 32px;
+}
+
+.bloque-video h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.bloque-video video {
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+.bloque-video .caption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.bloque-video p {
+  margin-top: 16px;
+}
