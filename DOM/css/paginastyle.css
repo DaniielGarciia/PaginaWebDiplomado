@@ -207,7 +207,7 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Sección 2: Título + Video + Texto ── */
+/* Título + Video + Texto */
 .seccion-video {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -297,3 +297,128 @@ body {
         font-size: 14px;
     }
 }
+
+/* títulos de sección API */
+
+.api-section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  margin: 40px 0 8px;
+  letter-spacing: -0.3px;
+}
+
+.api-section-sub {
+  font-size: 13.5px;
+  color: #888;
+  margin-bottom: 24px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 40px auto;
+  max-width: 860px;
+}
+
+/* ── Wikipedia: botones de familia ── */
+.familia-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 24px 0 16px;
+}
+
+.familia-btn {
+  padding: 10px 22px;
+  border: 1.5px solid #333;
+  border-radius: 30px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #333;
+}
+
+.familia-btn:hover,
+.familia-btn.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ── Wikipedia: panel de resultado ── */
+#wiki-panel {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin: 0 auto 32px;
+  max-width: 860px;
+  min-height: 100px;
+}
+
+#wiki-panel h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+#wiki-panel p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #444;
+}
+
+#wiki-panel a.wiki-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+#wiki-panel a.wiki-link:hover {
+  text-decoration: underline;
+}
+
+#wiki-panel img.wiki-thumb {
+  float: right;
+  margin: 0 0 12px 20px;
+  border-radius: 8px;
+  max-width: 200px;
+  max-height: 160px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* estados de carga y error  */
+.wiki-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #888;
+  font-size: 14px;
+}
+
+.wiki-loading::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-top-color: #555;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+.wiki-error {
+  color: #be123c;
+  font-size: 13px;
+}
+
+/* ── Animación compartida ── */
+@keyframes spin { to { transform: rotate(360deg); } }

@@ -192,3 +192,223 @@
     vertical-align: middle;
     filter: brightness(0) invert(1);
 }
+
+/* ═══════════════════════════════════════════════
+   AUTH GLOBAL — Modal de login + botones navbar
+   (compartido con paginastyle.css)
+   ═══════════════════════════════════════════════ */
+
+/* ── Overlay del modal ── */
+#auth-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+#auth-modal-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#auth-modal-overlay.hidden {
+    display: none;
+}
+
+/* ── Caja del modal ── */
+#auth-modal {
+    background: #fff;
+    border-radius: 16px;
+    padding: 36px 32px 28px;
+    width: 100%;
+    max-width: 360px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: authModalIn 0.3s ease;
+}
+
+@keyframes authModalIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes authShake {
+    0%,  100% { transform: translateX(0); }
+    20%       { transform: translateX(-8px); }
+    40%       { transform: translateX(8px); }
+    60%       { transform: translateX(-5px); }
+    80%       { transform: translateX(5px); }
+}
+
+#auth-modal.shake {
+    animation: authShake 0.4s ease;
+}
+
+/* ── Icono y títulos ── */
+#auth-modal-icon {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: -4px;
+}
+
+#auth-modal h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #111;
+    margin: 0;
+}
+
+.auth-subtitle {
+    font-size: 0.82rem;
+    color: #888;
+    text-align: center;
+    margin: -6px 0 4px;
+}
+
+/* ── Botón cerrar ── */
+#auth-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+#auth-modal-close:hover {
+    color: #333;
+}
+
+/* ── Campos del formulario ── */
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.auth-field label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.auth-field input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-field input:focus {
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Botón ingresar ── */
+#auth-btn-login {
+    margin-top: 4px;
+    padding: 11px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#auth-btn-login:hover  { background: #333; }
+#auth-btn-login:active { transform: scale(0.98); }
+
+/* ── Mensaje de error ── */
+.auth-error {
+    color: #be123c;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: -4px 0;
+}
+
+/* ── Botones en el navbar ── */
+#nav-auth-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    padding-right: 4px;
+}
+
+#nav-btn-show-login {
+    padding: 6px 14px;
+    background: transparent;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+#nav-btn-show-login:hover {
+    background: #f0f0f0;
+}
+
+#nav-btn-logout {
+    padding: 6px 14px;
+    background: #560b0b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+#nav-btn-logout:hover {
+    background: #8a1818;
+}
+
+/* ── Badge "✓ Admin" ── */
+.nav-admin-badge {
+    font-size: 0.75rem;
+    background: #dcfce7;
+    color: #166534;
+    padding: 3px 8px;
+    border-radius: 99px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid #bbf7d0;
+}
+
+/* ── Responsive del modal ── */
+@media (max-width: 576px) {
+    #auth-modal {
+        margin: 16px;
+        padding: 28px 20px 22px;
+    }
+}
